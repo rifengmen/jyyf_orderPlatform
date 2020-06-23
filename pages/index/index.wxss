@@ -1,0 +1,100 @@
+/**index.wxss**/
+.search_cont {
+  width: 100%;
+}
+.search_cont .search {
+  width: 100%;
+  height: 70rpx;
+  margin: 14rpx 0;
+  border: 1rpx #cecece solid;
+  border-radius: 45rpx;
+}
+.search_cont .search .search_input {
+  width: 70%;
+  height: 100%;
+  border: none;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search_input image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.search_input input {
+  width: 80%;
+  height: 100%;
+  line-height: 70rpx;
+}
+.search_cont .search .search_btn {
+  width: 150rpx;
+  height: calc(100% - 2rpx);
+  border-left: 1rpx #cecece solid;
+  border-radius: 45rpx;
+}
+.shopslist {
+  width: 100%;
+}
+.shopslist .shopinfo {
+  width: 100%;
+  padding: 20rpx 10rpx; 
+}
+.shopinfo .shoptit {
+  width: 100%;
+  height: 140rpx;
+
+}
+.shopinfo .shopimg {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+}
+.shopinfo .shopimg image {
+  width: 100%;
+  height: 100%;
+}
+.shopinfo .shopname {
+  width: 530rpx;
+  margin-right: 20rpx;
+}
+.shopinfo .shopname .vip_name {
+  width: 100%;
+  overflow: hidden;
+}
+.shopinfo .shopname .name {
+  width: 470rpx;
+}
+.shopinfo .shopcategory {
+  display: inline-block;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+}
+.shopinfo .shopname .areabox {
+  width: 100%;
+}
+.shopinfo .shopname .area {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+.shopinfo .vipclass {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.shopinfo .shoptags {
+  padding: 10rpx 4rpx;
+}
+.shopinfo .tags {
+  display: inline-block;
+  padding: 2rpx 8rpx;
+  margin-right: 20rpx;
+  border-radius: 14rpx;
+}
+.shopinfo .shopdes {
+  padding: 10rpx 0;
+}

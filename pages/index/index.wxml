@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索 start -->
+  <view class="search_cont color666 font26">
+    <view class="search">
+      <view class="search_input fl">
+        <image src="/lib/images/search.png" class="fr"></image>
+        <input type="text" bindinput="getSearchVal" placeholder="请输入标签进行搜索" class="fl" />
+      </view>
+      <button class="search_btn font26 fr colorff9500" disabled="{{search_val==='' ? true : false}}" bindtap="sendSearchData">搜索</button>
+    </view>
+  </view>
+  <!-- 搜索 end -->
+  <!-- banner start -->
+  <view class="page-section page-section-spacing swiper" wx:if="{{bannerList}}">
+      <swiper
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}">
+        <swiper-item wx:for="{{bannerList}}" wx:key="*this">
+          <view class="swiper-item">{{item}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  <!-- banner end -->
+  <!-- 店铺列表 start -->
+  <view class="shopslist">
+    <!-- 店铺简介 start -->
+    <navigator class="shopinfo" wx:for="{{shopsList}}" wx:key="index" url="/pages/shopInfo/shopInfo">
+      <view class="shoptit">
+        <view class="shopimg fl">
+          <cover-image class="img" src="{{item.img}}"></cover-image>
+        </view>
+        <view class="shopname fr color666">
+          <view class="vip_name">
+            <image class="vipclass fl" wx:if="{{vipClass[item.vip]}}" src="{{vipClass[item.vip]}}"></image>
+            <view class="name font30 color333 ellipsis fl">{{item.name}}</view>
+          </view>
+          <view class="shopcategory font24 colorfff bg1470cc">{{categoryArray[item.category]}}</view>
+          <view class="area_box">
+            <image class="area" src="/lib/images/area.png"></image>
+            <text class="font26">{{item.area}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="shoptags">
+        <!-- 店铺标签 start -->
+        <text wx:for="{{item.tags}}" wx:key="index" class="tags font24 color333 bgcecece">{{item}}</text>
+        <!-- 店铺标签 end -->
+      </view>
+      <view class="shopdes">
+        <view class="font28 color666 ellipsis">{{item.des}}</view>
+      </view>
+    </navigator>
+    <!-- 店铺简介 end -->
+  </view>
+  <!-- 店铺列表 end -->
+</view>
